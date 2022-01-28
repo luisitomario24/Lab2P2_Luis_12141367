@@ -157,6 +157,12 @@ public class Lab2p2_Luis_12141367 {
         System.out.println(animales.get(leer.nextInt()));
     }
     public static void alimentacionAnimal(){
+        System.out.println("Ingrese la posicion del animal 1 que comera a otro: ");
+        int animalcomedor=leer.nextInt();
+        System.out.println("Ingrese la posicion del animal numero 2 que sera deborado: ");
+        int animaldeborado=leer.nextInt();
+
+        animales.get(animalcomedor).vida+= animales.get(animaldeborado).vida;
 
     }
 
