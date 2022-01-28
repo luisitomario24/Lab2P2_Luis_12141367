@@ -11,7 +11,7 @@ public class Animal {
     private String rasgos;
     private String Distribucion;
     private int vida;
-    int hola;
+    int hol;
 
     public Animal(){
 
