@@ -10,7 +10,7 @@ public class Animal {
     private String alimentacion;
     private String rasgos;
     private String Distribucion;
-    private int vida;
+    int vida;
     int hol;
 
     public Animal(){

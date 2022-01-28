@@ -10,10 +10,10 @@ public class Lab2p2_Luis_12141367 {
     public static ArrayList<Animal> animales =new ArrayList<Animal>();
 
     public static Scanner leer = new Scanner(System.in);
-
+    public static int vida;
 
     public static void main(String[] args) {
-        
+
 
         do{
             opcionAnimal( menuAnimal() );
@@ -157,12 +157,15 @@ public class Lab2p2_Luis_12141367 {
         System.out.println(animales.get(leer.nextInt()));
     }
     public static void alimentacionAnimal(){
+
         System.out.println("Ingrese la posicion del animal 1 que comera a otro: ");
         int animalcomedor=leer.nextInt();
         System.out.println("Ingrese la posicion del animal numero 2 que sera deborado: ");
         int animaldeborado=leer.nextInt();
-
+        //metodo para eliminar el animal deborado
         animales.get(animalcomedor).vida+= animales.get(animaldeborado).vida;
+        animales.remove(animaldeborado);
+
 
     }
 
