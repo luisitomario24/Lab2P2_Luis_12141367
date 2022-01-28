@@ -85,8 +85,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "leer=" + leer +
-                ", nombreCientifico='" + nombreCientifico + '\'' +
+        return  "nombreCientifico='" + nombreCientifico + '\'' +
                 ", nombreComun='" + nombreComun + '\'' +
                 ", Habitat='" + Habitat + '\'' +
                 ", alimentacion='" + alimentacion + '\'' +
@@ -95,4 +94,6 @@ public class Animal {
                 ", vida=" + vida +
                 '}';
     }
+
+
 }

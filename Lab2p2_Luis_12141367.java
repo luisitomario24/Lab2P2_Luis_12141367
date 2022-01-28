@@ -3,13 +3,18 @@ package Lab_Progra2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class Lab2p2_Luis_12141367 {
 
     public static ArrayList<Animal> animales =new ArrayList<Animal>();
+
     public static Scanner leer = new Scanner(System.in);
 
 
     public static void main(String[] args) {
+        
+
         do{
             opcionAnimal( menuAnimal() );
         }while(true);
@@ -18,7 +23,7 @@ public class Lab2p2_Luis_12141367 {
         System.out.println("");
         System.out.println("");
         System.out.println("0. Salir");
-        System.out.println("1.Registrar animal" +
+        System.out.println("1.Registrar animal\n" +
                 "2.Editar animales\n" +
                 "3. Imprimir por posicion de la lista\n" +
                 "4. Impirmir lista completa\n" +
@@ -37,7 +42,6 @@ public class Lab2p2_Luis_12141367 {
             editarAnimal();
         }
        else if(opcion == 3){
-
         }
 
        else if(opcion == 4){
@@ -66,6 +70,7 @@ public class Lab2p2_Luis_12141367 {
         System.out.print("Años de vida: ");
         int vida = leer.nextInt();
         animales.add(new Animal(nombreCientifico, nombreComun, Habitat, alimentacion, rasgos, Distribucion,vida));
+
     }
     public static void editarAnimal(){
         System.out.print("Ingrese la posicion: ");
@@ -137,6 +142,16 @@ public class Lab2p2_Luis_12141367 {
         for (Animal ani:animales){
             System.out.println(animales.toString());
         }
-
     }
+    public static void listarNombreCientifico(){
+        for(Animal ani:animales){
+            // Cuando es listar un solo elemento se usa el nombre inventado
+            System.out.println(ani.getNombreCientifico());
+        }
+    }
+    public static void listarxLista(){
+        System.out.println("posicion a buscar ");
+        System.out.println(animales.get(leer.nextInt()));
+    }
+
 }
