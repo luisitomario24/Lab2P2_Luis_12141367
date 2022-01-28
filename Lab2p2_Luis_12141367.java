@@ -11,7 +11,7 @@ public class Lab2p2_Luis_12141367 {
 
     public static void main(String[] args) {
         do{
-            opcionAnimal(menuAnimal() );
+            opcionAnimal( menuAnimal() );
         }while(true);
     }
     public static int menuAnimal(){
@@ -20,7 +20,6 @@ public class Lab2p2_Luis_12141367 {
         System.out.println("0. Salir");
         System.out.println("Registrar animal" +
                 "1.Editar animales\n" +
-                "2.Editar todos los atributos del animal\n" +
                 "3. Imprimir por posicion de la lista\n" +
                 "4. Impirmir lista completa\n" +
                 "5. Imprimir por nombre cientifico\n" +
@@ -90,22 +89,43 @@ public class Lab2p2_Luis_12141367 {
             animales.get(pos).setNombreCientifico(leer.next());
         }else if(opcion == 2){
             System.out.print("Nombre Comun: ");
-            animales.get(pos).setUsuario(leer.next());
+            animales.get(pos).setNombreComun(leer.next());
         }else if(opcion == 3){
-            System.out.print("Contrasena: ");
-            lista.get(pos).setContrasena(sc.next());
+            System.out.print("Habitat: ");
+            animales.get(pos).setHabitat(leer.next());
         }else if(opcion == 4){
-            System.out.println("Correo: ");
-            lista.get(pos).setCorreo(sc.next());
+            System.out.println("Alimentacion: ");
+            animales.get(pos).setAlimentacion(leer.next());
         }else if(opcion == 5){
-            System.out.print("Cuenta: ");
-            lista.get(pos).setNumeroCuenta(sc.nextInt());
+            System.out.print("Rasgos: ");
+            animales.get(pos).setRasgos(leer.next());
         }else if(opcion == 6){
-            System.out.print("Año: ");
-            lista.get(pos).setAnioIngreso(sc.nextInt());
+            System.out.print("Distribucion: ");
+            animales.get(pos).setDistribucion(leer.next());
         }else if(opcion == 7){
-            System.out.println("Tipo: ");
-            lista.get(pos).setTipo(sc.next());
+            System.out.println("Años de vida: ");
+            animales.get(pos).setVida(leer.nextInt());
         }
+
+    }
+    public static void editarTodosAtributos(int pos){
+        System.out.print("Nombre Cientiico: ");
+        animales.get(pos).setNombreCientifico(leer.next());
+        System.out.print("Nombre Comun: ");
+        animales.get(pos).setNombreComun(leer.next());
+        System.out.print("Habitat: ");
+        animales.get(pos).setHabitat(leer.next());
+        System.out.println("Alimentacion: ");
+        animales.get(pos).setAlimentacion(leer.next());
+        System.out.print("Rasgos: ");
+        animales.get(pos).setRasgos(leer.next());
+        System.out.print("Distribucion: ");
+        animales.get(pos).setDistribucion(leer.next());
+        System.out.println("Años de vida: ");
+        animales.get(pos).setVida(leer.nextInt());
+    }
+    public static void eliminarAnimal(){
+        System.out.print("Posicion: ");
+        animales.remove(leer.nextInt());
     }
 }
