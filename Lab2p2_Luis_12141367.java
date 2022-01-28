@@ -68,7 +68,7 @@ public class Lab2p2_Luis_12141367 {
     }
     public static void registarAnimales(){
         System.out.println("Nombre cientifico: ");
-        String nombreCientifico = leer.nextLine();
+        String nombreCientifico = leer.next();
         System.out.println("Nombre comun: ");
         String nombreComun = leer.next();
         System.out.println("Habitat: ");
@@ -76,9 +76,9 @@ public class Lab2p2_Luis_12141367 {
         System.out.println("Alimentacion: ");
         String alimentacion = leer.next();
         System.out.println("Rasgos: ");
-        String rasgos = leer.nextLine();
+        String rasgos = leer.next();
         System.out.println("Distribucion: ");
-        String Distribucion = leer.nextLine();
+        String Distribucion = leer.next();
         System.out.println("Años de vida: ");
         int vida = leer.nextInt();
         animales.add(new Animal(nombreCientifico, nombreComun, Habitat, alimentacion, rasgos, Distribucion,vida));
