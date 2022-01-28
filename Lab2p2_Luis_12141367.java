@@ -19,7 +19,7 @@ public class Lab2p2_Luis_12141367 {
         System.out.println("");
         System.out.println("0. Salir");
         System.out.println("Registrar animal" +
-                "1.Editar nombre cientifico\n" +
+                "1.Editar animales\n" +
                 "2.Editar todos los atributos del animal\n" +
                 "3. Imprimir por posicion de la lista\n" +
                 "4. Impirmir lista completa\n" +
@@ -62,5 +62,50 @@ public class Lab2p2_Luis_12141367 {
         System.out.print("Años de vida: ");
         int vida = leer.nextInt();
         animales.add(new Animal(nombreCientifico, nombreComun, Habitat, alimentacion, rasgos, Distribucion,vida));
+    }
+    public static void editarAnimal(){
+        System.out.print("Ingrese la posicion: ");
+        int pos = leer.nextInt();
+        System.out.println("1. Editar un atributo");
+        System.out.println("2. Editar todos los atributos");
+        System.out.print("Ingrese la opcion: ");
+        int opcion = leer.nextInt();
+        if(opcion == 1)
+            editarAtributoAnimal(pos);
+        else if(opcion == 2)
+            editarTodosAtributos(pos);
+    }
+    public static void editarAtributoAnimal(int pos){
+        System.out.print("Nombre cientifico: ");
+        System.out.print("Nombre comun: ");
+        System.out.print("Habitat: ");
+        System.out.print("Alimentacion: ");
+        System.out.print("Rasgos: ");
+        System.out.print("Distribucion: ");
+        System.out.print("Años de vida: ");
+        System.out.print("Ingrese la opcion: ");
+        int opcion = leer.nextInt();
+        if(opcion == 1){
+            System.out.print("Nombre Cientiico: ");
+            animales.get(pos).setNombreCientifico(leer.next());
+        }else if(opcion == 2){
+            System.out.print("Nombre Comun: ");
+            animales.get(pos).setUsuario(leer.next());
+        }else if(opcion == 3){
+            System.out.print("Contrasena: ");
+            lista.get(pos).setContrasena(sc.next());
+        }else if(opcion == 4){
+            System.out.println("Correo: ");
+            lista.get(pos).setCorreo(sc.next());
+        }else if(opcion == 5){
+            System.out.print("Cuenta: ");
+            lista.get(pos).setNumeroCuenta(sc.nextInt());
+        }else if(opcion == 6){
+            System.out.print("Año: ");
+            lista.get(pos).setAnioIngreso(sc.nextInt());
+        }else if(opcion == 7){
+            System.out.println("Tipo: ");
+            lista.get(pos).setTipo(sc.next());
+        }
     }
 }
