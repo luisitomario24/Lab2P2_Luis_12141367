@@ -11,10 +11,15 @@ public class Lab2p2_Luis_12141367 {
 
     public static Scanner leer = new Scanner(System.in);
     public static int vida;
+    //Creacion de tres animales por defecto
+    Animal puma =new Animal();
+    Animal tigre =new Animal();
+    Animal perro=new Animal();
 
     public static void main(String[] args) {
-
-
+       Animal puma=new Animal("pumilla","puma","bosque","hojas","veloz","Honduras",500);
+       Animal tigre=new Animal("tigrillo","tigre","selva","dinosaurios","lento","Alemania",800);
+       Animal perro=new Animal("perritus","perro","casa hogar","doggy cachorro","muy lento","Guatemala",1);
         do{
             opcionAnimal( menuAnimal() );
         }while(true);
@@ -29,6 +34,7 @@ public class Lab2p2_Luis_12141367 {
                 "4. Impirmir lista completa\n" +
                 "5. Imprimir por nombre cientifico\n" +
                 "6. Eliminar animal\n" +
+                "7. Alimentar animal" +
                 "Ingrese la opcion: ");
         return leer.nextInt();
     }
@@ -54,6 +60,9 @@ public class Lab2p2_Luis_12141367 {
         }
         else if(opcion == 6){
             eliminarAnimal();
+        }
+        else if (opcion == 7){
+            alimentacionAnimal();
         }
 
     }
