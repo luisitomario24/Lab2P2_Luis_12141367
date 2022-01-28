@@ -24,7 +24,7 @@ public class Lab2p2_Luis_12141367 {
         System.out.println("");
         System.out.println("0. Salir");
         System.out.println("1.Registrar animal\n" +
-                "2.Editar animales\n" +
+                "2. Editar animales\n" +
                 "3. Imprimir por posicion de la lista\n" +
                 "4. Impirmir lista completa\n" +
                 "5. Imprimir por nombre cientifico\n" +
@@ -42,13 +42,16 @@ public class Lab2p2_Luis_12141367 {
             editarAnimal();
         }
        else if(opcion == 3){
+            listarxordendeLista();
         }
 
        else if(opcion == 4){
             listarAnimales();
         }
 
-       // else if(opcion == 5)
+        else if(opcion == 5){
+            listarNombreCientifico();
+        }
         else if(opcion == 6){
             eliminarAnimal();
         }
@@ -149,9 +152,12 @@ public class Lab2p2_Luis_12141367 {
             System.out.println(ani.getNombreCientifico());
         }
     }
-    public static void listarxLista(){
+    public static void listarxordendeLista(){
         System.out.println("posicion a buscar ");
         System.out.println(animales.get(leer.nextInt()));
+    }
+    public static void alimentacionAnimal(){
+
     }
 
 }
